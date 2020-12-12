@@ -1,0 +1,53 @@
+<h4>Редактировать "{{course.title}}"</h4>
+
+<form action="/courses/edit" method="POST">
+  <div class="input-field">
+    <input id="title" name="title" type="text" class="validate" required value="{{course.title}}">
+    <label for="title">Название курса</label>
+    <span class="helper-text" data-error="Введите программы"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="price" name="price" type="number" class="validate" required min="1"  value="{{course.price}}">
+    <label for="price">Цена курса</label>
+    <span class="helper-text" data-error="Введите цену"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="img" name="img" type="text" class="validate" required  value="{{course.img}}">
+    <label for="img">URL картинки</label>
+    <span class="helper-text" data-error="Введите url картинки"></span>
+  </div>
+<div class="input-field">
+    <input id="desc" name="desc" type="text" class="validate" required  value="{{course.desc}}">
+    <label for="desc">Описание</label>
+    <span class="helper-text" data-error="Введите описание"></span>
+  </div>
+   <div class="input-field ">
+    <select  id="level" name="level" type="text">
+     <option value="{{course.level}}" disabled selected>Выберите интенсивность</option>
+      <option value="Сложно" >Сложная интенсивность</option>
+      <option value="Средне">Средняя интенсивность</option>
+      <option value="Легко">Легкая интенсивность</option>
+    </select>
+    <label for="level">Интенсивность</label>
+  </div>
+  <div class="input-field ">
+    <select  id="type" name="type" type="text">
+     <option value="{{course.type}}" disabled selected>Выберите тип</option>
+     <option value="питание">питание</option>
+      <option value="тренировки">тренировки</option>
+    </select>
+    <label for="type">Тип</label>
+  </div>
+  <input type="hidden" name="id" value="{{course.id}}">
+  <input type="hidden" name="_csrf"  value="{{csrf}}">
+
+  <button  type="submit" class="waves-effect waves-light btn-large purple ">Редактировать программу</button>
+  
+</form>
+<form action="/courses/remove" method="POST">
+<input type="hidden" name="id" value="{{course.id}}">
+<input type="hidden" name="_csrf"  value="{{csrf}}">
+<button style= "margin-top: 5px; color: purple; "class="waves-effect waves-light btn-large yellow ">Удалить</button>
+</form>

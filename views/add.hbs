@@ -1,0 +1,47 @@
+<h4>Добавить новую программу</h4>
+{{#if error}}
+<p class="alert">{{error}}</p>
+{{/if}}
+<form action="/add" method="POST">
+  <div class="input-field">
+    <input id="title" name="title" type="text" class="validate" required value="{{data.title}}">
+    <label for="title">Название</label>
+    <span class="helper-text" data-error="Введите название"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="price" name="price" type="number" class="validate" required min="1" value="{{data.price}}">
+    <label for="price">Цена</label>
+    <span class="helper-text" data-error="Введите цену"></span>
+  </div>
+
+  <div class="input-field">
+    <input  id="img" name="img" type="text" class="validate" required value="{{data.img}}">
+    <label for="img">URL картинки</label>
+    <span class="helper-text" data-error="Введите url картинки"></span>
+  </div>
+   <div class="input-field">
+    <input  id="desc" name="desc" type="text" class="validate" required value="{{data.desc}}">
+    <label for="desc">Описание</label>
+    <span class="helper-text" data-error="Введите описание"></span>
+  </div>
+  <div class="input-field">
+    <select id="level" name="level" type="text">
+      <option value="" disabled selected>Выберите интенсивность</option>
+     <option value="Сложно" >Сложная интенсивность</option>
+      <option value="Средне">Средняя интенсивность</option>
+      <option value="Легко">Легкая интенсивность</option>
+    </select>
+    <label for="level">Интенсивность</label>
+  </div>
+  <div class="input-field">
+    <select id="type" name="type" type="text">
+      <option value="" disabled selected>Выберите тип</option>
+     <option value="питание" >питание</option>
+      <option value="тренировки" >тренировки</option>
+    </select>
+    <label for="type">Тип</label>
+  </div>
+  <input type="hidden" name="_csrf"  value="{{csrf}}">
+  <button class="waves-effect waves-light btn-large purple ">Добавить</button>
+</form>

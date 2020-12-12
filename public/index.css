@@ -1,0 +1,277 @@
+.brand-logo{
+  font-size: 60px;
+  font-family: 'Asap', sans-serif;
+}
+.nav-wrapper {
+    padding: 0 2rem;
+    background-color:  #ab47bc ;
+
+  }
+  .tabs .indicator {
+ 
+    background-color: #ab47bc ;
+    
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+  background-color: transparent;
+  color: #ab47bc ;
+}
+.tabs .tab a {
+  color: #ab47bc;}
+
+  .new{
+    display:flex;
+    margin:30px;
+  }
+  .pills {
+    margin-left: 0;
+    list-style: none;
+    counter-reset: li;
+    font-size: 16pt;
+    color:#7b1fa2;
+  }
+  .pills li {
+    padding: 15px 0;
+    position: relative;
+    left: 1.5em;
+    margin-bottom: 0.9em;
+    padding-left: 1em;
+    background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+  }
+  .pills li:before {
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1.5em;
+    width: 1.875em;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: #ab47bc;
+    border-bottom-left-radius: 70em;
+    border-top-left-radius: 70em;
+    counter-increment: li;
+    content: counter(li);
+  }
+.page-footer{
+   margin-top:15px;
+  background-color:  #ab47bc ;
+}
+  .card {
+    margin-top:20px;
+  }
+  
+  
+  .price{
+    font-size: 2rem;
+  }
+  
+  
+  .course h1 {
+    margin-bottom: 2rem;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .course img {
+    max-width: 600px;
+    height: auto;
+    margin: 15px;
+  }
+  
+  .course .price.big {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #7b1fa2 ;
+  }
+  .intensy{
+    margin:15px;
+   font-size: 15pt;
+   padding:10px;
+   border-style:solid;
+   border-radius: 10%;
+  }
+ .intensivity_new{
+  
+   font-size: 18pt;
+    font-family: 'Lobster', cursive;
+    color: #7b1fa2 ;
+ }
+  .box{
+    margin-top:25px;
+    
+  }
+  .card-action.actions{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .main{
+    background:url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png") ;
+ 
+  }
+  body{
+    font-family: 'Work Sans', sans-serif;
+    background:url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png") ;
+  }
+  .desc{
+    color:#7b1fa2;
+    font-size: 17pt;
+    text-align: left;
+    margin-right: 15px;
+  }
+  h4{
+    color:#7b1fa2;
+    text-align:center;
+  
+    font-size: 25pt;
+  
+    font-family: 'Lobster', cursive;
+   
+  }
+  .input-field label {
+    color: #7b1fa2 ;
+  }
+  .input-field text {
+    color: #7b1fa2 ;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color:#7b1fa2;
+  }
+  .input-field input[type=password]:focus + label {
+    color:#7b1fa2;
+  }
+  .input-field input[type=email]:focus + label {
+    color:#7b1fa2;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+    color:#7b1fa2;
+  }
+  .input-field input[type=password]:focus {
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+    color:#7b1fa2;
+  }
+  .input-field input[type=email]:focus {
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+    color:#7b1fa2;
+  }
+  .input-field input[type=text] {
+    color:#7b1fa2;
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+  }
+  .input-field input[type=password] {
+    color:#7b1fa2;
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+  }
+  .input-field input[type=email] {
+    color:#7b1fa2;
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+    color:#7b1fa2;
+  }
+  .input-field input[type=password].valid {
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+    color:#7b1fa2;
+  }
+  .input-field input[type=email].valid {
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+    color:#7b1fa2;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+    color:#7b1fa2;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #7b1fa2;
+  }
+  
+  .dropdown-content li>a, .dropdown-content li>span {
+    color:#7b1fa2;
+  }
+  .input-field input[type=text]:not(.browser-default):focus:not([readonly])+label{
+    color:purple;
+  }
+  .input-field input[type=number]:not(.browser-default):focus:not([readonly])+label{
+    
+    color:purple;
+  }
+  .input-field input[type=password]:not(.browser-default):focus:not([readonly])+label{
+    
+    color:purple;
+  }
+  .input-field input[type=email]:not(.browser-default):focus:not([readonly])+label{
+    
+    color:purple;
+  }
+  .input-field .prefix{
+    color: #7b1fa2;
+  }
+  .input-field input[type=number]:not(.browser-default):focus:not([readonly]){
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+  }
+  .input-field input[type=text]:not(.browser-default):focus:not([readonly]){
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+  }
+  .input-field input[type=password]:not(.browser-default):focus:not([readonly]){
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+  }
+  .input-field input[type=email]:not(.browser-default):focus:not([readonly]){
+    border-bottom: 1px solid #7b1fa2;
+    box-shadow: 0 1px 0 0 #7b1fa2;
+  }
+ 
+ .course{
+  background:url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png") ;
+
+ }
+ .course_flex{
+   display:flex;
+   justify-content: center;
+   
+ }
+.auth{
+  padding-top: 1rem;
+}
+.tabs .tab a.active {
+  background-color: transparent;
+  color: purple;
+}
+
+.tabs .tab a {
+    color:purple;
+  }
+
+.tabs .tab a:hover, .tabs .tab a.active {
+      background-color:transparent;
+      color: purple;
+  }
+  .alert{
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    background:rgba(255, 0,0 ,.3);
+    color:red;
+
+  }

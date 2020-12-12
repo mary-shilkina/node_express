@@ -1,0 +1,36 @@
+
+
+<div id="card" style="color: rebeccapurple; margin-top:20px;">
+{{#if courses.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>Название</th>
+        <th>Количество</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      {{#each courses}}
+      <tr>
+        <td>{{title}}</td>
+        <td>{{count}}</td>
+        <td>
+           <button  style="color:purple" class="btn btm-small js-remove yellow"  data-id="{{id}}"
+            data-csrf="{{@root.csrf}}"
+          >Удалить</button>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <p><strong>Цена:</strong> <span class="price">{{price}}</span></p>
+  <form action="/orders" method="POST">
+  <input type="hidden" name="_csrf"  value="{{csrf}}">
+  <button type="submit"  style="color:white" class=" pulse waves-effect waves-light btn-large purple" >Сделать заказ</button></form>
+{{else}}
+  <h4>Корзина пуста</h4>
+{{/if}}
+</div>

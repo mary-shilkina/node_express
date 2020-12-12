@@ -1,0 +1,22 @@
+
+<div class="course">
+  <h4 style=" margin: 2rem;
+    font-family: 'Lobster', cursive;
+    font-size:30pt">{{course.title}}</h4>
+
+ <div class="course_flex"><div> <img class="materialboxed"  src="{{course.img}}" alt="{{course.title}}"> </div>
+  <div><p class="desc">{{course.desc}}</p></div></div>
+   <p class="price big">{{course.price}}</p>
+
+ <!-- <div class="input-field">
+    <input id="review" name="review" type="text" class="validate" required>
+     <input type="hidden" name="id" value="{{course._id}}">
+    <label for="review">коммент</label>
+    <span class="helper-text" data-error="коммент"></span>
+  </div>
+   <button type="submit"  class="waves-effect waves-light btn-large purple ">Добавить</button>-->
+    <form action="/card/add" method="POST">
+     <input type="hidden" name="id" value="{{id}}">
+          <input type="hidden" name="_csrf"  value="{{@root.csrf}}">
+ <p style="text-align:center;"><button  type="submit"class="waves-effect waves-light  btn-large purple " style="margin-top: 5px; align-content:center;">Купить</button> </p> </form>
+</div>

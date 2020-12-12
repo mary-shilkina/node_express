@@ -1,0 +1,48 @@
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center" style="
+    font-size: 52px;text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+;
+">  BodyFit &#10084  </a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        {{#if isHome}}
+        <li class="active"><a href="/">Главная</a></li>
+        {{else}}
+        <li><a href="/">Главная</a></li>
+        {{/if}}
+        {{#if isCourse}}
+        <li class="active"><a href="/courses">Программы</a></li>
+        {{else}}
+        <li><a href="/courses">Программы</a></li>
+        {{/if}}
+       {{#if isAuth}}
+        
+        {{#if isCard}}
+        <li class="active"><a href="/card">Корзина</a></li>
+        {{else}}
+        <li><a href="/card"> Корзина</a></li>
+        {{/if}}
+      
+         {{#ifeq '5fa824189e89c9052c647c2f' @root.userId}}
+         {{#if isAdd}}
+        <li class="active"><a href="/add"> Добавление </i></a></li>
+        {{else}}
+        <li><a href="/add">Добавление</a></li>
+        {{/if}}{{/ifeq}}
+        {{#if isOrder}}
+        <li class="active"><a href="/orders"> Покупки</i></a></li>
+        {{else}}
+        <li><a href="/orders">Покупки</a></li>
+        {{/if}}
+        <li><a href="/auth/logout">Выйти</a> </li>
+       {{else}}
+        {{#if isLogin}}
+        <li class="active"><a href="/auth/login#login">Войти</i></a></li>
+        {{else}}
+        <li><a href="/auth/login#login">Войти</a></li>
+        {{/if}}
+       {{/if}}
+
+      </ul>
+    </div>
+  </nav>

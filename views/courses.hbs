@@ -1,0 +1,40 @@
+
+ <div style="display:flex;"><div><p class="intensivity_new">Выбери уровень: </p></div><div class="box"><a href="/courses/easy" class="intensy" style="color:#2E8B57;border-color:#00FA9A">Легко</a>
+ <a href="/courses/middle"  class="intensy" style="color:#FFD700 ;border-color:#FFD700">Средне</a>
+ <a href="/courses/hard"  class="intensy" style="color:tomato;border-color:#B22222">Сложно</a></div></div>
+ <div style="display:flex;"><div><p class="intensivity_new">Выбери: </p></div><div class="box"><a href="/courses/p" class="intensy" style="color:#FF69B4;border-color:#FF1493">питание</a>
+ <a href="/courses/t"  class="intensy" style="color:#4169E1;border-color:#1E90FF">тренировки</a> </div></div>
+
+<div class="row">
+{{#if courses.length}}
+{{#each courses}}
+
+
+  <div class="col s12 m6 l4 ">
+    <div class="card large">
+      <div class="card-image" >
+        <img src="{{img}}" alt="{{title}}">
+      </div>
+      <div class="card-content">
+        <span class="card-title" style="color:purple">{{title}}</span>
+        <p class="price" style="color: rebeccapurple;">{{price}}</p>
+        <p class="level" style="color: rebeccapurple;">{{level}}</p>
+      </div>
+      <div class="card-action actions">
+        <a href="/courses/{{id}}"  style="color:purple;">Подробнее</a>
+        {{#if @root.isAuth}}
+        {{#ifeq userId._id @root.userId}}
+        <a href="/courses/{{id}}/edit?allow=true" style="color:purple" >Редактировать</a>
+        {{/ifeq}}
+      <form action="/card/add" method="POST">
+          <input type="hidden" name="id" value="{{id}}">
+          <input type="hidden" name="_csrf"  value="{{@root.csrf}}">
+          <button  type="submit"class="waves-effect waves-light  btn-large purple " style="margin-top: 5px;">Купить</button>
+        </form>  {{/if}}
+  </div></div>
+</div>
+{{/each}}
+{{else}}
+<p>Программ пока нет</p>
+{{/if}}
+</div>
